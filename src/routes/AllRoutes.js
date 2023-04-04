@@ -1,0 +1,1 @@
+import { MovieDetail, MovieList, PageNotFound, Search } from "../pages"
