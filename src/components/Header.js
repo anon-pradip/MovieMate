@@ -6,6 +6,10 @@ import logo from "../assets/logo1.jpg"
 import { Nav, NavLink } from 'react-router-dom'
 
 export default function Header() {
+  const activeClass = "inline-flex  items-center border-b-2 border-indigo-500 bg-slate-50 px-1 pt-1 text-sm font-medium text-gray-900"
+
+  const inActiveClass = "inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+
   return (
     <Disclosure as="nav" className="bg-white shadow">
       {({ open }) => (
@@ -24,25 +28,25 @@ export default function Header() {
                 <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
                   {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                   <NavLink to="/"
-                    className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                    className={({ isActive }) => isActive ? activeClass : inActiveClass}
                     end
                   >
                     Home
                   </NavLink>
                   <NavLink to="movies/popular"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    className={({ isActive }) => isActive ? activeClass : inActiveClass}
                   >
                     Popular
                   </NavLink>
                   <NavLink
                     to="movies/top"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    className={({ isActive }) => isActive ? activeClass : inActiveClass}
                   >
                     Top Rated
                   </NavLink>
                   <NavLink
                     to="movies/upcoming"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    className={({ isActive }) => isActive ? activeClass : inActiveClass}
                   >
                     Upcoming
                   </NavLink>
