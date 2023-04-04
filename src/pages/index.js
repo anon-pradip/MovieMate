@@ -1,4 +1,6 @@
-export { MovieDetail } from "./MovieDetail"
-export { MovieList } from "./MovieList"
-export { Search } from "./Search"
-export { PageNotFound } from "./PageNotFound"
+import MovieDetail from "./MovieDetail"
+import MovieList from "./MovieList"
+import Search from "./Search"
+import PageNotFound from "./PageNotFound"
+
+export { MovieDetail, MovieList, Search, PageNotFound }

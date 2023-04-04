@@ -1,8 +1,11 @@
+import Header from "./components/Header";
+import AllRoutes from "./routes/AllRoutes";
 
 function App() {
   return (
-    <div className=" text-3xl font-mono font-extrabold">
-      Just getting started
+    <div className="">
+      <Header />
+      <AllRoutes />
     </div>
   );
 }
