@@ -54,11 +54,11 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className="bg-white">
+    <footer className="bg-white dark:bg-gray-900 dark:text-white">
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
           {navigation.map((item) => (
-            <Link to={item.href} target="_blank" rel="noopener noreferrer">
+            <Link to={item.href} key={item.name} target="_blank" rel="noopener noreferrer">
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </Link>

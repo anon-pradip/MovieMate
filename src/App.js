@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="">
       <Header />
-      <div className="">
+      <div className="min-h-[85vh]">
         <AllRoutes />
       </div>
       <Footer />
