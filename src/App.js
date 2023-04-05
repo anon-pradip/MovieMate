@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="">
       <Header />
-      <div className="min-h-[85vh]">
+      <div className="min-h-[85vh]  dark:bg-gray-800">
         <AllRoutes />
       </div>
       <Footer />

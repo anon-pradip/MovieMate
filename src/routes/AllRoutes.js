@@ -3,7 +3,7 @@ import { MovieDetail, MovieList, PageNotFound, Search } from "../pages"
 
 const AllRoutes = () => {
   return (
-    <>
+    <section className="">
       <Routes>
         <Route path="/" element={<MovieList />} />
         <Route path="movie/:id" element={<MovieDetail />} />
@@ -13,7 +13,7 @@ const AllRoutes = () => {
         <Route path="search" element={<Search />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-    </>
+    </section>
   )
 }
 
